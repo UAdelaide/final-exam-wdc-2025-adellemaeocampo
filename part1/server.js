@@ -1,8 +1,17 @@
-const express = require('express');
-const mysql = require('mysql2/promise');
-const db = require('./db');
-const app = express();
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var mysql = require('mysql2/promise');
 
+var app = express();
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+let db;
 const PORT=8080;
 
 (async () => {
@@ -21,7 +30,8 @@ const PORT=8080;
       user: 'root',
       password: '',
       database: 'testdb'
-      });
+    });
+
     await db.execute(`
       CREATE TABLE IF NOT EXISTS Users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
