@@ -7,27 +7,6 @@ const PORT=8080;
 
 (async () => {
   try {
-    const connection = await mysql.createConnection({
-          host: 'localhost',
-          user: 'root',
-          password: ''
-        });
-
-        // Create the database if it doesn't exist
-        await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
-        await connection.end();
-
-        // Now connect to the created database
-        db = await mysql.createConnection({
-          host: 'localhost',
-          user: 'root',
-          password: '',
-          database: 'testdb'
-        });
-
-
-
-
     await db.execute(`
       CREATE TABLE IF NOT EXISTS Users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
