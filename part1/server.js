@@ -3,12 +3,7 @@ const db = require('./db');
 const app = express();
 const mysql = require('mysql2');
 
-// const PORT=8080;
-
-// const InsertTestData = () => {
-//   const insertUser =
-//   ``
-// }
+const PORT=8080;
 
 (async () => {
   try {
@@ -23,7 +18,7 @@ const mysql = require('mysql2');
       )
     `);
 
-    const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
+    const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (rows[0].count === 0) {
       await db.execute(`
         INSERT INTO books (title, author) VALUES
