@@ -51,6 +51,8 @@ app.get('/api/walkrequests/open', async(req,res) => {
   }
 });
 
+app.get()
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
