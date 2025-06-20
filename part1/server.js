@@ -20,7 +20,8 @@ const PORT=8080;
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (rows[0].count === 0) {
       await db.execute(`
-        INSERT INTO Users(unsername, email, password_)
+        INSERT INTO Users(unsername, email, password_hash, role)
+        VALUES ('testUser')
       `);
     }
   } catch (err) {
