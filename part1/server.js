@@ -52,7 +52,9 @@ app.get('/api/walkrequests/open', async(req,res) => {
 
 app.get('/api/walkers/summary', async(req, res) => {
   try {
-    const [walkerSummary] = await db.qu
+    const [walkerSummary] = await db.query (
+      `SELECT a`
+    )
   }
 });
 
