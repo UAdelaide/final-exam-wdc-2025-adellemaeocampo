@@ -39,7 +39,7 @@ app.get('/api/dogs', async (req,res) => {
   }
 });
 
-app.get('')
+app.get('/api/walkrequests/open', async())
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
