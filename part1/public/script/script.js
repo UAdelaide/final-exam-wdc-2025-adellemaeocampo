@@ -4,5 +4,11 @@ Vue.createApp ({
     dogImage:''
   },
 
-  
+  mounted() {
+
+  },
+
+  methods() {
+    fetchDog
+  }
 })
