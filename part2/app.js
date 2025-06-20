@@ -12,6 +12,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 //q13 added sessions
 app.use(session({
+  name: 'dogwalk.sid',
   secret: 'secretKey123',
   resave: false,
   saveUninitialized: false
