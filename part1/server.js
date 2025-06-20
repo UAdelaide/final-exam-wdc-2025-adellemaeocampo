@@ -30,6 +30,6 @@ const PORT=8080;
   }
 })();
 
-db.
+app.get('/api/dogs')
 
 
