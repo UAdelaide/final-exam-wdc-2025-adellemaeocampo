@@ -2,9 +2,8 @@
 Vue.createApp ({
   data() {
     return {
-      
-    }
-    dogImage:''
+      dogImage:''
+    };
   },
 
   mounted() {
