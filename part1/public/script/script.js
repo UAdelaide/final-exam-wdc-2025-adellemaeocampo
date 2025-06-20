@@ -8,7 +8,7 @@ Vue.createApp ({
     this.fetchDog();
   },
 
-  methods() {
+  methods(): {
     fetchDog() {
       fetch('https://dog.ceo/api/breeds/image/random')
         .then(res=>res.json())
