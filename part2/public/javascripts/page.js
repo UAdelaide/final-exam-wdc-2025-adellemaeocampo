@@ -175,7 +175,7 @@ function downvote(index) {
 
 
 function login(){
-    //changed 
+    //changed to user instead of email
     let user = {
         username: document.getElementById('username').value,
         password: document.getElementById('password').value
@@ -187,9 +187,11 @@ function login(){
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            //changed for better handling
             const data = JSON.parse(this.responseText);
             alert("Welcome " + data.user.username);
 
+            
             if(data.user.role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
             } else if (data.user.role === 'walker') {
