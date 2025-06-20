@@ -1,4 +1,8 @@
 
 Vue.createApp ({
+  data() {
+    dogImage:''
+  },
+
   
 })
