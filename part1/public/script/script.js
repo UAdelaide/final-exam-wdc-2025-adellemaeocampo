@@ -9,6 +9,8 @@ Vue.createApp ({
   },
 
   methods() {
-    fetchDog
+    fetchDog() {
+
+    }
   }
-})
+}).mount('#dog')
