@@ -15,6 +15,17 @@ let db;
 
 (async () => {
   try {
+    const connection = await mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: ''
+    });
+
+
+    await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
+    await connection.end();
+
+    // Now connect to the created database
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
