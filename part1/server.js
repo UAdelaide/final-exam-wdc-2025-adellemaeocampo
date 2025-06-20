@@ -35,7 +35,7 @@ app.get('/api/dogs', async (req,res) => {
     res.json(dogs);
   } catch (err) {
     console.error('Error fetching dogs for route /api/dogs:', err);
-    res.status(500).json({error: 'Failed to fetch dog route'});
+    res.status(500).json({error: 'Failed to fetch dogs through /api/dogs route'});
   }
 });
 
@@ -46,7 +46,7 @@ app.get('/api/walkrequests/open', async(req,res) => {
     );
     res.json(openRequests);
   } catch (err) {
-    res.status(500).json({error: 'Failed to fetch walkrequests through api/walkrequests/open route'});
+    res.status(500).json({error: 'Failed to fetch walkrequests through /api/walkrequests/open route'});
   }
 });
 
