@@ -45,6 +45,9 @@ app.get('/api/walkrequests/open', async(req,res) => {
       "SELECT * FROM WalkRequests WHERE status = 'open'"
     );
     res.json(openRequests);
+  } catch (err) {
+    console.error('Error fetching dogs for route /api/dogs:', err);
+    res.status(500).json({error: 'Failed ot fetch dog route'});
   }
 });
 
