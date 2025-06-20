@@ -46,8 +46,7 @@ app.get('/api/walkrequests/open', async(req,res) => {
     );
     res.json(openRequests);
   } catch (err) {
-    console.error('Error fetching walk requests for route /api/walkrequests/open:', err);
-    res.status(500).json({error: 'Failed to fetch walkrequest route'});
+    res.status(500).json({error: 'Failed to fetch walkrequests through api/walkrequests/open route'});
   }
 });
 
