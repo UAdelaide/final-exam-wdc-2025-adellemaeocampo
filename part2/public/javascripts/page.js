@@ -219,8 +219,8 @@ function logout(){
     xmlhttp.onreadystatechange = function() {
         if(this.readyState === 4) {
             if(this.status === 200) {
-                window.location.href
-            }
+                window.location.href ='index.html';
+            } else 
         }
     }
 
