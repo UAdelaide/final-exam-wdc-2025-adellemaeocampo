@@ -1,6 +1,9 @@
 
 Vue.createApp ({
   data() {
+    return {
+      
+    }
     dogImage:''
   },
 
@@ -12,7 +15,7 @@ Vue.createApp ({
     fetchDog() {
       fetch('https://dog.ceo/api/breeds/image/random')
         .then(res =>res.json())
-        .then(data=> {
+        .then(data => {
           this.dogImage = data.message;
         });
     }
