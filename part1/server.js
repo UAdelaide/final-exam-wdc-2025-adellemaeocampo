@@ -12,23 +12,6 @@ const mysql = require('mysql2');
 
 (async () => {
   try {
-    const connection = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: ''
-    });
-
-    await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
-    await connection.end();
-
-    db = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: '',
-      database: 'DogWalkService'
-    });
-
-    // Create a table if it doesn't exist
     await db.execute(`
       CREATE TABLE IF NOT EXISTS books (
         id INT AUTO_INCREMENT PRIMARY KEY,
