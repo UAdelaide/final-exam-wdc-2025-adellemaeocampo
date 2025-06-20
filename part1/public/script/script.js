@@ -11,7 +11,10 @@ Vue.createApp ({
   methods() {
     fetchDog() {
       fetch('https://dog.ceo/api/breeds/image/random')
-        .then
+        .then(res=>res.json())
+        .then(data=> {
+
+        });
     }
   }
 }).mount('#dogApp')
