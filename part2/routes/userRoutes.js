@@ -68,7 +68,7 @@ router.post('/logout', (req, res) => {
     }
     res.clearCookie('dogwalk.sid');
     res.status(200).json({ message: 'logout success!'});
-  })
+  });
 });
 
 module.exports = router;
