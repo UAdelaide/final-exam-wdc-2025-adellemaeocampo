@@ -62,6 +62,7 @@ router.post('/login', async (req, res) => {
 
 //adding logout route
 router.post('/logout', (req, res) => {
+  //destroys c
   req.session.destroy(err => {
     if(err) {
       return res.status(500).json({ error: 'failed to logout'});
