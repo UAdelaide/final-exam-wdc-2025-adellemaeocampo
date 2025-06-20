@@ -1,33 +1,12 @@
-var express = require('express');
-var mysql = require('mysql2/promise');
+const express = require('express');
+const mysql = require('mysql2/promise');
+const db = require('./db');
+const app = express();
 
-var app = express();
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-
-let db;
 const PORT=8080;
 
 (async () => {
   try {
-    const connection = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: ''
-    });
-
-    await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
-    await connection.end();
-
-    db = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: '',
-      database: 'DogWalkService'
-    });
-
     await db.execute(`
       CREATE TABLE IF NOT EXISTS Users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -53,7 +32,7 @@ const PORT=8080;
 
 app.get('/api/dogs', (req,res) => {
   try {
-    const [dogs] = db.query('SELECT * FROM Dogs');
+    const [dogs] = await db.query('SELECT * FROM Dogs');
     res.json(dogs);
   } catch (err) {
     console.error('Error fetching dogs for route /api/dogs:', err);
