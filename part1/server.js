@@ -1,4 +1,5 @@
 const express = require('express');
+const mysql = require('mysql2/promise');
 const db = require('./db');
 const app = express();
 
@@ -9,7 +10,7 @@ const PORT=8080;
     const connection = await mysql.createConnection({
           host: 'localhost',
           user: 'root',
-          password: '' 
+          password: ''
         });
 
         // Create the database if it doesn't exist
