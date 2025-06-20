@@ -21,7 +21,7 @@ const PORT=8080;
     if (rows[0].count === 0) {
       await db.execute(`
         INSERT INTO Users(unsername, email, password_hash, role)
-        VALUES ('testUser', 'test@tester.com', )
+        VALUES ('testUser', 'test@tester.com', 'tester123!', 'owner');
       `);
     }
   } catch (err) {
