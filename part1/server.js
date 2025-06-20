@@ -7,21 +7,21 @@ const PORT=8080;
 
 (async () => {
   try {
-      const connection = await mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: ''
+    const connection = await mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: ''
+    });
+
+    await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
+    await connection.end();
+
+    db = await mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      database: 'testdb'
       });
-
-      await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
-      await connection.end();
-
-      db = await mysql.createConnection({
-          host: 'localhost',
-          user: 'root',
-          password: '',
-          database: 'testdb'
-        });
     await db.execute(`
       CREATE TABLE IF NOT EXISTS Users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
