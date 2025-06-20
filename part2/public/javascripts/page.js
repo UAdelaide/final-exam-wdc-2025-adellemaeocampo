@@ -191,7 +191,7 @@ function login(){
             alert("Welcome " + data.user.username);
 
             if(data.user.role === 'owner') {
-                win
+                window.location.href = 'owner'
             }
 
         } else if (this.readyState == 4 && this.status >= 400) {
