@@ -67,7 +67,7 @@ router.post('/logout', (req, res) => {
       return res.status(500).json({ error: 'failed to logout'});
     }
     res.clearCookie('dogwalk.sid');
-    res.status()
+    res.status(200).json()
   })
 });
 
