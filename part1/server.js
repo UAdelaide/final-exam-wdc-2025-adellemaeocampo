@@ -50,7 +50,9 @@ app.get('/api/walkrequests/open', async(req,res) => {
   }
 });
 
-app.get('/api/walkers/summary')
+app.get('/api/walkers/summary', async(req, res) => {
+  
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
