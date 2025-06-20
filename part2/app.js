@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
+//
 const session = require('express-session');
 
 const app = express();
@@ -9,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-//
+//q13 added sessions
 app.use(session({
   secret: 'secretKey123',
   resave: false,
