@@ -1,5 +1,5 @@
-Terminal close -- exit!
-DogWalkService;
+-- Terminal close -- exit!
+-- DogWalkService;
 CREATE DATABASE DogWalkService;
 USE DogWalkService;
 CREATE TABLE Users (
