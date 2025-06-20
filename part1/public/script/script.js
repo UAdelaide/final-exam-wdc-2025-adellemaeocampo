@@ -1,4 +1,4 @@
-Vue.createApp ({
+Vue.createApp({
   data() {
     return {
       dogImage: ''
