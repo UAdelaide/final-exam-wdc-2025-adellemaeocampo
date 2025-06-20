@@ -191,7 +191,7 @@ function login(){
             const data = JSON.parse(this.responseText);
             alert("Welcome " + data.user.username);
 
-            
+            //added so then redirects user depending on what role they are
             if(data.user.role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
             } else if (data.user.role === 'walker') {
