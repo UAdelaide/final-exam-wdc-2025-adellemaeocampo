@@ -61,4 +61,4 @@ VALUES ('alice123', 'alice@example.com','hashed123', 'owner'),
        ('adelle', 'adelle@gmail.com', 'Password123!', 'owner'),
        ('test', 'test@test.com', 'test123!', 'walker');
 
-INSERT INTO Dogs()
+INSERT INTO Dogs(owner_id, name, size)
