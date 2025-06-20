@@ -9,6 +9,10 @@ const db = mysql.createConnection({
   database: 'DogWalkService'
 });
 
-db.connect()
+db.connect((err) => {
+  if(err) {
+    
+  }
+})
 
 
