@@ -17,6 +17,6 @@ db.connect((err) => {
   console.log('SQL Connected');
 });
 
-export.mod
+module.exports = db;
 
 
