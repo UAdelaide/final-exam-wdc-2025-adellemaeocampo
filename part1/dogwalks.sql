@@ -66,4 +66,4 @@ VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'
        ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
        ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Mochi', 'large'),
        ((SELECT user_id FROM Users WHERE username = 'adelle'), 'Astro', 'medium'),
-       ((SELECT user_id FROM Users WHERE username = 'adelle'), 'Astro', 'large');
+       ((SELECT user_id FROM Users WHERE username = 'adelle'), 'Jelly', 'large');
