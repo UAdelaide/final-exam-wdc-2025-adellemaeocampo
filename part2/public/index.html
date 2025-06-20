@@ -12,7 +12,7 @@
   <div id="app" class="container py-5">
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <!-- form added for user login -->
-    <form onsubmit="login(); ret">
+    <form onsubmit="login(); return false;">
       <label>Username</label>
       <input type="text" name="Username" placeholder="Username" required>
       <br>
