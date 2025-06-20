@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
-//
+//q13 added sessions
 const session = require('express-session');
 
 const app = express();
