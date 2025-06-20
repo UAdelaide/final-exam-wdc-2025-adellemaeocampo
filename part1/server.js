@@ -34,6 +34,8 @@ app.get('/api/dogs', (req,res) => {
   try {
     const [dogs] = await db.query('SELECT * FROM Dogs');
     res.json(dogs);
+  } catch (err) {
+    
   }
 
 
