@@ -29,7 +29,7 @@ const PORT=8080;
   }
 })();
 
-app.get('/api/dogs', (req,res) => {
+app.get('/api/dogs', async (req,res) => {
   try {
     const [dogs] = await db.query('SELECT * FROM Dogs');
     res.json(dogs);
