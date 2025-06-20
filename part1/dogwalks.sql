@@ -1,4 +1,4 @@
-Terminal close -- exit!
+-- Terminal close -- exit!
 DogWalkService;
 CREATE DATABASE DogWalkService;
 USE DogWalkService;
