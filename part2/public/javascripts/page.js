@@ -216,6 +216,7 @@ function logout(){
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
 
+    //added for question 14 to redirect logout
     xmlhttp.onreadystatechange = function() {
         if(this.readyState === 4) {
             if(this.status === 200) {
