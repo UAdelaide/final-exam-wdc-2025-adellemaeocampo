@@ -13,4 +13,4 @@ Vue.createApp ({
 
     }
   }
-}).mount('#dog')
+}).mount('#dogApp')
