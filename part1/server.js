@@ -60,7 +60,7 @@ app.get('/api/walkers/summary', async(req, res) => {
       GROUP BY u.user_id`
     )
   } catch (err) {
-    res.status(500).json({error: 'Failed to fetch walkers summary through /api/walkrequests/open route'});
+    res.status(500).json({error: 'Failed to fetch walkers summary through /api/walkers/summary route'});
   }
 });
 
