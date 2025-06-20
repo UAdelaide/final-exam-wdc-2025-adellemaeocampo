@@ -39,6 +39,8 @@ app.get('/api/dogs', async (req,res) => {
   }
 });
 
+app.get('')
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
