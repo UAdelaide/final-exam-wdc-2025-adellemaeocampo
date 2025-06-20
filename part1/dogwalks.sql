@@ -54,11 +54,11 @@ CREATE TABLE WalkRatings (
     CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
 );
 
-INSERT INTO users(username, email, password_hash, role)
+INSERT INTO Users(username, email, password_hash, role)
 VALUES ('alice123', 'alice@example.com','hashed123', 'owner'),
        ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
        ('adelle', 'adelle@gmail.com', 'Password123!', 'owner'),
        ('test', 'test@test.com', 'test123!', 'walker');
 
-INSERT INTO d
+INSERT INTO Dogs()
