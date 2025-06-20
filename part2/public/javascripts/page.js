@@ -190,7 +190,9 @@ function login(){
             const data = JSON.parse(this.responseText);
             alert("Welcome " + data.user.username);
 
-            
+            if(data.user.role === 'owner') {
+                win
+            }
 
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
