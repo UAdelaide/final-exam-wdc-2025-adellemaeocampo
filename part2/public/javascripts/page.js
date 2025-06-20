@@ -187,8 +187,10 @@ function login(){
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            const data = JSON.parse(this.responseText)
-            alert("Welcome "+this.responseText);
+            const data = JSON.parse(this.responseText);
+            alert("Welcome " + data.user.username);
+
+            
 
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
