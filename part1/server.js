@@ -35,11 +35,9 @@ app.get('/api/dogs', (req,res) => {
     const [dogs] = await db.query('SELECT * FROM Dogs');
     res.json(dogs);
   } catch (err) {
-    console.error('Error fetching dogs for route /api/dogs:' err);
-    res.status(500).json({error: })
+    console.error('Error fetching dogs for route /api/dogs:', err);
+    res.status(500).json({error: 'Failed ot fetch dog route'});
   }
-
-
 });
 
 
