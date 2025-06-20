@@ -220,9 +220,11 @@ function logout(){
         if(this.readyState === 4) {
             if(this.status === 200) {
                 window.location.href ='index.html';
-            } else 
+            } else {
+                alert('failed to logout!');
+            }
         }
-    }
+    };
 
     // Open connection to server & send the post data using a POST request
     //change route
