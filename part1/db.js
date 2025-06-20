@@ -1,5 +1,5 @@
 
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 
 //would put in .env but couldnt create one
 const db = mysql.createConnection({
