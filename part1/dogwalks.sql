@@ -59,4 +59,5 @@ VALUES ('alice123', 'alice@example.com','hashed123', 'owner'),
        ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
        ('adelle', 'adelle@gmail.com', 'Password123!', 'owner'),
-       ('test', 'test@test.com', 'test123!', 'wa')
+       ('test', 'test@test.com', 'test123!', 'walker');
+
