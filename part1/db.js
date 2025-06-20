@@ -9,14 +9,6 @@ const db = mysql.createPool({
   database: 'DogWalkService'
 });
 
-db.connect((err) => {
-  if(err) {
-    console.error('DB unable to connect:', err);
-    process.exit(1);
-  }
-  console.log('SQL Connected');
-});
-
 module.exports = db;
 
 
