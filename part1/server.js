@@ -32,7 +32,7 @@ const PORT=8080;
 
 app.get('/api/dogs', (req,res) => {
   try {
-    const [dogs] = await db.query('SELECT * FROM Dogs');
+    const [dogs] = db.query('SELECT * FROM Dogs');
     res.json(dogs);
   } catch (err) {
     console.error('Error fetching dogs for route /api/dogs:', err);
