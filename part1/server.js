@@ -31,8 +31,11 @@ const PORT=8080;
 })();
 
 app.get('/api/dogs', (req,res) => {
-  const [dogs] = await db.query('SELECT * FROM Dogs');
-  res.json(dogs);
+  try {
+    const [dogs] = await db.query('SELECT * FROM Dogs');
+    res.json(dogs);
+  }
+
 
 });
 
