@@ -10,7 +10,8 @@ h1 {
 
 p{
   font-size: xx-small;
-  color:lightskyblue
+  color:lightskyblue;
+  font-family: fantasy;
 }
 
 button{
