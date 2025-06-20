@@ -36,7 +36,7 @@ app.get('/api/dogs', (req,res) => {
     res.json(dogs);
   } catch (err) {
     console.error('Error fetching dogs for route /api/dogs:' err);
-    
+    res.status(500).json({error: })
   }
 
 
