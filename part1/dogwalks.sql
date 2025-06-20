@@ -62,4 +62,4 @@ VALUES ('alice123', 'alice@example.com','hashed123', 'owner'),
        ('test', 'test@test.com', 'test123!', 'walker');
 
 INSERT INTO Dogs(owner_id, name, size)
-VALUES ((SELECT user_id FROM Users WHERE username = ), 'Max')
+VALUES ((SELECT user_id FROM Users WHERE username = ), 'Max', 'medium'),
