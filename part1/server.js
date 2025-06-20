@@ -54,11 +54,13 @@ app.get('/api/walkers/summary', async(req, res) => {
   try {
     const [walkerSummary] = await db.query (
       `SELECT u.user_id, u.username, COUNT(wr.request_id) AS walks_completed
-        FROM Users u
+      FROM Users u
       JOIN WalkRequests wr ON u.user_id = wr.dog_id
       WHERE u.role = 'walker' AND wr.status = 'completed'
       GROUP BY u.user_id`
     )
+  } catch (err) {
+
   }
 });
 
