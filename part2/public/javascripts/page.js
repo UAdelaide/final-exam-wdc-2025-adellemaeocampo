@@ -216,7 +216,7 @@ function logout(){
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
 
-    
+    xmlhttp.onreadystatechange
 
     // Open connection to server & send the post data using a POST request
     //change route
