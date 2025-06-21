@@ -73,7 +73,9 @@
             }
             this.dogs = doglist;
           })
-          .catch (e)
+          .catch (err) {
+            console.error('Failed to fetch dogs:', )
+          }
       }
     }).mount('#app');
   </script>
