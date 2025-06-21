@@ -67,7 +67,8 @@
           .then(res=>res.json())
           .then(async doglist => {
             for(dog of doglist) {
-              const dogPhotoRes = await fetch('https://dog.ceo/api/breeds/image/random')
+              const dogImage = await fetch('https://dog.ceo/api/breeds/image/random');
+              const dogData = 
             }
           })
       }
