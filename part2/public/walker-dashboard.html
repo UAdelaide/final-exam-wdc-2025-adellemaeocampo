@@ -60,7 +60,8 @@
           try {
             const res = fetch('/api/user/me');
             if (!res.ok) throw new Error('Failed to load user');
-            
+            const user = await res.json();
+
           }
         }
 
