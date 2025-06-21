@@ -62,7 +62,7 @@
           dogs: []
         };
       },
-      mounted() {
+      async mounted() {
         try {
           const res = await fetch('/api/dogs');
           const doglist = await res.json();
