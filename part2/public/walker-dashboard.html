@@ -83,7 +83,7 @@
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               //changed fro q16
-              body: JSON.stringify({ walker_id: getCurrentUser.user_id })
+              body: JSON.stringify({ walker_id: currentUser.user_id })
             });
             const result = await res.json();
 
