@@ -66,16 +66,14 @@
         try {
           const res = await fetch('/api/dogs');
           const doglist = await res.json();
-          
-          .then(async doglist => {
-            for(const dog of doglist) {
-              const dogImage = await fetch('https://dog.ceo/api/breeds/image/random');
-              const dogData = await dogImage.json();
-              dog.photo = dogData.message;
+
+          for(const dog of doglist) {
+            const dogImage = await fetch('https://dog.ceo/api/breeds/image/random');
+            const dogData = await dogImage.json();
+            dog.photo = dogData.message;
             }
             this.dogs = doglist;
-          })
-        } catch (err) {
+          } catch (err) {
 
         }
 
