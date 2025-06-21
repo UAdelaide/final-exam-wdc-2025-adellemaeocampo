@@ -64,11 +64,7 @@
       },
       mounted() {
         try {
-
-        } catch (err) {
-          
-        }
-        fetch('/api/dogs')
+           fetch('/api/dogs')
           .then(res=>res.json())
           .then(async doglist => {
             for(const dog of doglist) {
@@ -77,6 +73,10 @@
               dog.photo = dogData.message;
             }
             this.dogs = doglist;
+        } catch (err) {
+
+        }
+
           })
           .catch (err) {
             console.error('Failed to fetch dogs:', err);
