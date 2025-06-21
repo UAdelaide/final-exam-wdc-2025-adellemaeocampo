@@ -76,7 +76,7 @@
     createApp({
       setup() {
         const form = ref({
-          dog_name:'',
+          dog_id:'',
           requested_time: '',
           duration_minutes: '',
           location: ''
@@ -101,7 +101,7 @@
           try{
             const res = await fetch('/api/users/me');
             const userData = await res.json();
-            const dogRes = await fetch(`/api/dogs?owner_id=${userData.user_id}');
+            const dogRes = await fetch(`/api/dogs?owner_id=${userData.user_id}`);
             dogs.value = await dogRes.json();
           } catch (err) {
             error.value = 'Failed to load your dogs';
