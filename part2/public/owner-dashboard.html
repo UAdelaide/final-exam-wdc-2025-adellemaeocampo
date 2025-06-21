@@ -104,7 +104,7 @@
             const dogRes = await fetch('/api/dogs?owner_id=${userData.user_id}');
             dogs.value = await dogRes.json();
           } catch (err) {
-            error.value
+            error.value = 'Failed to load your do'
           }
 
         }
