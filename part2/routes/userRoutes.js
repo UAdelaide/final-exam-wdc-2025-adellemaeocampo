@@ -28,13 +28,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.get('/me', (req, res) => {
-  if (!req.session.user) {
-    return res.status(401).json({ error: 'Not logged in' });
-  }
-  res.json(req.session.user);
-});
-
+//q15
 router.get('/dogs', async(req,res) => {
   const {owner_id} = req.query;
 
@@ -43,11 +37,19 @@ router.get('/dogs', async(req,res) => {
       `SELECT dog_id, name FROM Dogs WHERE owner_id = ?`,
       [owner_id]
     );
-    res.json(yourDogs);
+    res.json(dogs);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 });
+
+router.get('/me', (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).json({ error: 'Not logged in' });
+  }
+  res.json(req.session.user);
+});
+
 
 // POST login (dummy version)
 router.post('/login', async (req, res) => {
