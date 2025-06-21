@@ -44,7 +44,9 @@ router.get('/dogs', async(req,res) => {
       [ower_id]
     );
     res.json(yourDogs);
-  } 
+  } catch (err) {
+    re
+  }
 });
 
 // POST login (dummy version)
