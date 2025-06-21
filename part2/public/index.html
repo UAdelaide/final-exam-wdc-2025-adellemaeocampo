@@ -71,10 +71,10 @@
             const dogImage = await fetch('https://dog.ceo/api/breeds/image/random');
             const dogData = await dogImage.json();
             dog.photo = dogData.message;
-            }
-            this.dogs = doglist;
+          }
+          this.dogs = doglist;
         } catch (err) {
-
+          
         }
 
           })
