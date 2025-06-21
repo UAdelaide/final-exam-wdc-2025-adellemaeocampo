@@ -64,7 +64,8 @@
       },
       mounted() {
         try {
-          fetch('/api/dogs')
+          const res = await fetch('/api/dogs');
+          const 
           .then(res=>res.json())
           .then(async doglist => {
             for(const dog of doglist) {
