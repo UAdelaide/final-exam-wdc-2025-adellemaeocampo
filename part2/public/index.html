@@ -71,11 +71,11 @@
             const dogImage = await fetch('https://dog.ceo/api/breeds/image/random');
             const dogData = await dogImage.json();
             dog.photo = dogData.message;
-            }
-            this.dogs = doglist;
-          } catch (err) {
-            console.error('Failed to fetch dogs:', err);
           }
+          this.dogs = doglist;
+        } catch (err) {
+          console.error('Failed to fetch dogs:', err);
+        }
       }
     }).mount('#app');
   </script>
