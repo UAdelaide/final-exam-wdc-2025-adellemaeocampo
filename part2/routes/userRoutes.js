@@ -36,7 +36,11 @@ router.get('/me', (req, res) => {
 });
 
 router.get('/dogs', async(req,res) => {
-  const {owner_id} 
+  const {owner_id} = req.query;
+
+  try{
+    const[]
+  }
 })
 
 // POST login (dummy version)
