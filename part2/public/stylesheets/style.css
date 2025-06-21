@@ -163,7 +163,7 @@ section {
    width:150px;
 }
 
-headerPart {
+.headerPart {
     display: flex;
     justify-content: space-between;
     align-items: center;
