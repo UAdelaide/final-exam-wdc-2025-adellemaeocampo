@@ -63,6 +63,11 @@
         };
       },
       mounted() {
+        try {
+
+        } catch (err) {
+          
+        }
         fetch('/api/dogs')
           .then(res=>res.json())
           .then(async doglist => {
