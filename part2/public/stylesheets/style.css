@@ -164,5 +164,6 @@ section {
 }
 
 headerPart {
-    
+    display: flex;
+    justify-content: space-between;
 }
