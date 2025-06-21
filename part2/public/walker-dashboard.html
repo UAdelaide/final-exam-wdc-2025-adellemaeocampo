@@ -72,7 +72,7 @@
           try {
             const currentUser = getCurrentUser();
             if(!currentUser) {
-              
+              throw new Error
             }
 
             const res = await fetch(`/api/walks/${requestId}/apply`, {
