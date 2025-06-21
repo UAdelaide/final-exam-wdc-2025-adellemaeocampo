@@ -73,6 +73,7 @@
           try {
             //added for q16 calls getcurrentuser fucntion
             const currentUser = getCurrentUser();
+            //ensure a user is identified
             if(!currentUser) {
               throw new Error('User not logged in!');
             }
@@ -80,6 +81,7 @@
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
+              //changed fro q16
               body: JSON.stringify({ walker_id: getCurrentUser.user_id })
             });
             const result = await res.json();
