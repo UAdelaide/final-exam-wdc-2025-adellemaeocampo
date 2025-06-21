@@ -104,7 +104,7 @@
             const dogRes = await fetch('/api/dogs?owner_id=${userData.user_id}');
             dogs.value = await dogRes.json();
           } catch (err) {
-            error.value = 'Failed to load your do'
+            error.value = 'Failed to load your dogs';
           }
 
         }
@@ -137,6 +137,7 @@
 
         onMounted(() => {
           loadWalks();
+          loadDogs();
         });
 
         return {
@@ -144,6 +145,7 @@
           walks,
           message,
           error,
+          dogs,
           submitWalkRequest
         };
       }
