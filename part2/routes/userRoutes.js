@@ -40,7 +40,7 @@ router.get('/dogs', async(req,res) => {
 
   try{
     const[yourDogs] = await db.query{
-      ``
+      `SELECT dog_id, name FROM `
     }
   }
 })
