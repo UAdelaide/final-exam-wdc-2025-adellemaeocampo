@@ -73,7 +73,7 @@
         async function applyToWalk(requestId) {
           try {
             //added for q16 calls getcurrentuser fucntion
-            const currentUser = getCurrentUser();
+            const currentUser = await getCurrentUser();
             //ensure a user is identified
             if(!currentUser) {
               throw new Error('User not logged in!');
